@@ -124,10 +124,10 @@ endif
 
 ifeq ($(CONFIG_SOC_EXYNOS9820), y)
 ifeq ($(cc-name),clang)
-KBUILD_CFLAGS   += -mcpu=cortex-a75
-KBUILD_AFLAGS   += -mcpu=cortex-a75
+KBUILD_CFLAGS   += -mcpu=cortex-a75+norcpc
+KBUILD_AFLAGS   += -mcpu=cortex-a75+norcpc
 ifeq ($(CONFIG_LD_IS_LLD), y)
-KBUILD_LDFLAGS  += -mllvm -mcpu=cortex-a75
+KBUILD_LDFLAGS  += -mllvm -mcpu=cortex-a75+norcpc
 endif
 else
 KBUILD_CFLAGS   += -mcpu=cortex-a75.cortex-a55
