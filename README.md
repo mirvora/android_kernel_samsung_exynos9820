@@ -7,17 +7,17 @@ https://source.android.com/docs/setup/start/requirements
 * The `libarchive-tools` package is also necessary to patch the toolchain.
 * The `ccache` package is necessary if you wish to build with CCache (Quicker subsequest builds)
 
-2. Clone repository:
+2. Clone repository with submodules (for backslashxx KernelSU):
 
-```git clone https://github.com/mirvora/android_kernel_samsung_exynos9820.git```
+```git clone --recurse-submodules https://github.com/mirvora/android_kernel_samsung_exynos9820.git```
 
-3. Build for your device:
+3. Build for your device (with backslashxx KernelSU):
 
-```./build.sh -m beyond1lte```
+```./build.sh -m beyond1lte -k y```
 
 3. Build for all devices:
 
-```./build_all.sh```
+```./build_all.sh -k y```
 
 4. Fetch the flashable zip of the kernel that was just compiled
 
